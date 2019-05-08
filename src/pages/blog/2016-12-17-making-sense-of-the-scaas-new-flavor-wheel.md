@@ -4,7 +4,8 @@ title: ACEITAR A MÃE É ACEITAR A VIDA! | Constelação Familiar | Marina Rabel
 date: 2016-12-17T15:04:10.000Z
 description: A8WY_JMn96c
 featuredpost: false
-featuredimage: /img/chemex.jpg
+featuredimage: /img/flavor_wheel.jpg
+ytkey: A8WY_JMn96c
 tags:
   - mãe
   - pais
