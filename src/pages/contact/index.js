@@ -115,6 +115,7 @@ export default class Index extends React.Component {
               </form>
             </div>
           </div>
+          {/* If you are planning to add reCAPTCHA please go to https://github.com/imorente/gatsby-netlify-form-example */}
         </section>
       </Layout>
     )

@@ -23,10 +23,10 @@ const TagsPage = ({
           >
             <h1 className="title is-size-2 is-bold-light">Categorias</h1>
             <p>Clique em uma categoria para ver todas as indicações com este tema</p>
-            <ul className="taglist">
+            <ul className="taglist tags">
               {group.map(tag => (
                 <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  <Link className="tag is-link" to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                     {tag.fieldValue} ({tag.totalCount})
                   </Link>
                 </li>

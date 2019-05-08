@@ -7,6 +7,7 @@ featuredimage: /img/chemex.jpg
 tags:
   - brewing
   - chemex
+  - youtube
 ---
 ![chemex](/img/chemex.jpg)
 
