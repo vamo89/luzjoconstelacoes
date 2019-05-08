@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'LuzJo Constelação Familiar Sistêmica',
     description:
-      'Este site contém informações sobre constelação familiar sistêmica.',
+      'Este site contém informações sobre constelação familiar sistêmica. Espaço LuzJo. Itabira/MG.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
