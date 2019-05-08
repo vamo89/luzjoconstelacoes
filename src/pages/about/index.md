@@ -19,9 +19,7 @@ Depoimentos:
 
 \_\_\_\_\_\__
 
-
-
-<div style={{ padding: 20, backgroundColor: 'tomato', borderRadius:100 }}>
+<div className="is-rounded">
 
 ![](/img/profile.jpg)
 
