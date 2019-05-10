@@ -13,49 +13,60 @@ class BlogRoll extends React.Component {
         {posts ?
           posts.map(({ node: post }) => (
             <div className="is-parent column is-4" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification`}
-              >
-                <header>
-                  {post.frontmatter.ytkey ? (
-                    <div className="featured-thumbnail">
-                      <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
-                    </div>
-                  ) : (
-                    post.frontmatter.featuredimage &&
+              <div className="card"
+              style={{
+                backgroundColor: 'rgba(0,50,200,0.1)',
+                borderRadius: 15,
+              }}>
+                <div className="card-image">
+                  <figure className="image">
+                    {post.frontmatter.ytkey ? (
                       <div className="featured-thumbnail">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${
-                              post.title
-                            }`,
-                          }}
-                        />
+                        <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
                       </div>
-                  )}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
+                    ) : (
+                      post.frontmatter.featuredimage &&
+                        <div className="featured-thumbnail">
+                          <PreviewCompatibleImage
+                            imageInfo={{
+                              image: post.frontmatter.featuredimage,
+                              alt: `featured image thumbnail for post ${
+                                post.title
+                              }`,
+                            }}
+                          />
+                        </div>
+                    )}
+                  </figure>
+                </div>
+                <div className="card-content">
+                  <div className="media">
+                    <div className="media-content">
+                      <p className="title">
+                        <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
+                          {post.frontmatter.title}
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="content">
+                    {post.excerpt}
+                    <br />
+                    <time>{post.frontmatter.date}</time>
+                    <br />
+                    <Link className="button is-info"
+                      style={{
+                        backgroundColor: '#209cee',
+                        borderColor: 'transparent',
+                        color: '#fff',
+                        transform: 'translate(50%)',
+                      }}
+                      to={post.fields.slug}>
+                      Continue lendo →
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Continue lendo →
-                  </Link>
-                </p>
-              </article>
+                  </div>
+                </div>
+              </div>
             </div>
           )) : 'Não há indicações por enquanto' }
       </div>
@@ -81,7 +92,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 100)
               id
               fields {
                 slug
