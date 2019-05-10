@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
@@ -21,9 +22,18 @@ class BlogRoll extends React.Component {
                       <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
                     </div>
                   ) : (
-                    <div className="featured-thumbnail">
-                      <img src={`url(${post.frontmatter.featuredimage})`} alt="Thumbnail" />
-                    </div>
+                    post.frontmatter.featuredimage ? (
+                      <div className="featured-thumbnail">
+                        <PreviewCompatibleImage
+                          imageInfo={{
+                            image: post.frontmatter.featuredimage,
+                            alt: `featured image thumbnail for post ${
+                              post.title
+                            }`,
+                          }}
+                        />
+                      </div>
+                    ) : null
                   )}
                   <p className="post-meta">
                     <Link
@@ -82,7 +92,13 @@ export default () => (
                 templateKey
                 date(formatString: "DD/MM/YYYY")
                 ytkey
-                featuredimage
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
