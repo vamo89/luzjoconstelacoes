@@ -82,9 +82,7 @@ export default () => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 ytkey
-                featuredimage {
-                  id
-                }
+                featuredimage
               }
             }
           }
