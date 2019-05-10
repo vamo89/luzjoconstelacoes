@@ -3,7 +3,7 @@ templateKey: blog-post
 title: ACEITAR A MÃE É ACEITAR A VIDA! | Constelação Familiar | Marina Rabelo
 date: 2016-12-17T15:04:10.000Z
 ytkey: A8WY_JMn96c
-featuredimage: /img/blog-index.jpg
+featuredimage: ''
 tags:
   - mãe
   - pais
