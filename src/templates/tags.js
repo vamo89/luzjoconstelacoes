@@ -30,9 +30,7 @@ class TagRoute extends React.Component {
                 <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
               </div>
             ) : (
-              <div className="featured-thumbnail">
-                <img src={`url(${post.frontmatter.featuredimage})`} alt="Youtube thumbnail" />
-              </div>
+             null
             )}
             <p className="post-meta">
               <Link
@@ -97,7 +95,6 @@ export const tagPageQuery = graphql`
           frontmatter {
             title
             ytkey
-            featuredimage
           }
         }
       }
