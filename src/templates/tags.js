@@ -29,7 +29,7 @@ class TagRoute extends React.Component {
           <header>
             {post.frontmatter.ytkey ? (
               <div className="featured-thumbnail">
-                <img src={`http://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
+                <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
               </div>
             ) : null}
             <p className="post-meta">
