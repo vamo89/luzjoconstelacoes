@@ -1,8 +1,10 @@
 ---
 templateKey: about-page
 title: Espaço LuzJo
-image: /img/profile
-imgdescription: Esta é a consteladora familiar Rita Ventura, que cuida do espaço com todo amor.
+image: /img/profile.jpg
+imgdescription: >-
+  Esta é a consteladora familiar Rita Ventura, que cuida do espaço com todo
+  amor.
 ---
 Espaço para realização de constelações familiares sistêmicas. Venha conhecer.
 
