@@ -16,7 +16,6 @@ collections:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Data de publicação", name: "date", widget: "datetime"}
       - {label: "Identificador do youtube", name: "ytkey", widget: "string"}
-      - {label: "Post de destaque", name: "featuredpost", widget: "boolean"}
       - {label: "Imagem de destaque", name: "featuredimage", widget: image}
       - {label: "Comentário sobre o vídeo", name: "body", widget: "markdown"}
       - {label: "Categorias", name: "tags", widget: "list"}
@@ -29,16 +28,17 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: "Título da página", name: title, widget: string}
+          - {label: "Imagem", name: image, widget: image}
+          - {label: "Título destaque", name: heading, widget: string}
+          - {label: "Sub-título destaque", name: subheading, widget: string}
+          - {label: "Descrição", name: description, widget: string}
       - file: "src/pages/about/index.md"
         label: "Espaço LuzJo"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Corpo", name: "body", widget: "markdown"}
+          - {label: "Imagem perfil", name: image, widget: image}
+          - {label: "Mensagem perfil", name: imgdescription, widget: string}

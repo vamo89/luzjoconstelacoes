@@ -42,8 +42,8 @@ export default class Index extends React.Component {
               <h1>Contato</h1>
               <p>Entre em contato conosco para:
                 <ul style={{marginTop: '0.3em', lineHeight: 1.4}}>
-                  <li>Pedir indicação de vídeo sobre algum tema.</li>
-                  <li>Informação e/ou marcação de constelação familiar sistêmica individual por skype.</li>
+                  <li>Pedir indicação sobre algum tema.</li>
+                  <li>Marcação de constelação familiar sistêmica individual presencial ou por skype.</li>
                   <li>Mais informações sobre constelação familiar.</li>
                 </ul>
               </p>
