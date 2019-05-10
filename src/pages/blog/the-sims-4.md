@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Sims 4
 date: 2017-01-04T15:04:10.000Z
 ytkey: SQPGolKYca0
-featuredimage: /img/favicon-32x32.png
+featuredimage: ''
 tags:
   - amigos
   - youtube
