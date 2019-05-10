@@ -12,6 +12,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
         ytkey={data.ytkey}
         tags={data.tags}
         title={data.title}
+        featuredimage={data.featuredimage}
       />
     )
   }
