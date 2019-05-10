@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
       }}
@@ -103,7 +103,7 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  const { markdownRemark: page } = data
+  const { frontmatter: page } = data.markdownRemark
 
   return (
     <Layout>
@@ -112,7 +112,7 @@ const IndexPage = ({ data }) => {
         title={page.title}
         subtitle={page.subtitle}
         contentComponent={HTMLContent}
-        content={page.html}
+        content={data.markdownRemark.html}
       />
     </Layout>
   )

@@ -10,7 +10,7 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="columns is-multiline">
-        {posts &&
+        {posts ?
           posts.map(({ node: post }) => (
             <div className="is-parent column is-4" key={post.id}>
               <article
@@ -22,7 +22,7 @@ class BlogRoll extends React.Component {
                       <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
                     </div>
                   ) : (
-                    post.frontmatter.featuredimage ? (
+                    post.frontmatter.featuredimage &&
                       <div className="featured-thumbnail">
                         <PreviewCompatibleImage
                           imageInfo={{
@@ -33,7 +33,6 @@ class BlogRoll extends React.Component {
                           }}
                         />
                       </div>
-                    ) : null
                   )}
                   <p className="post-meta">
                     <Link
@@ -58,7 +57,7 @@ class BlogRoll extends React.Component {
                 </p>
               </article>
             </div>
-          ))}
+          )) : 'Não há indicações por enquanto' }
       </div>
     )
   }

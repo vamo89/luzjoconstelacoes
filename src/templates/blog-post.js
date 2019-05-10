@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({
   content,
@@ -13,6 +14,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredimage,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -25,7 +27,12 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p><img src={`https://img.youtube.com/vi/${ytkey}/maxresdefault.jpg`} alt="Youtube thumbnail"/></p>
+            <p>
+              {ytkey ?
+                <img src={`https://img.youtube.com/vi/${ytkey}/maxresdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
+                : featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />
+              }
+            </p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -49,6 +56,7 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   title: PropTypes.string,
   ytkey: PropTypes.string,
+  featuredimage: PropTypes.any,
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   helmet: PropTypes.object,
@@ -74,6 +82,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredimage={post.frontmatter.featuredimage}
       />
     </Layout>
   )
@@ -97,6 +106,13 @@ export const pageQuery = graphql`
         title
         ytkey
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
