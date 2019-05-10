@@ -20,7 +20,11 @@ class BlogRoll extends React.Component {
                     <div className="featured-thumbnail">
                       <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="featured-thumbnail">
+                      <img src={`url(${post.frontmatter.featuredimage})`} alt="Thumbnail" />
+                    </div>
+                  )}
                   <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
@@ -79,11 +83,7 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 ytkey
                 featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
+                  id
                 }
               }
             }
