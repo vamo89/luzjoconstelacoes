@@ -15,8 +15,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Data de publicação", name: "date", widget: "datetime"}
-      - {label: "Identificador do youtube", name: "ytkey", widget: "string"}
-      - {label: "Imagem de destaque", name: "featuredimage", widget: image}
+      - {label: "Identificador do youtube", name: "ytkey", required: false, widget: "string"}
+      - {label: "Imagem de destaque", name: "featuredimage", required: false, widget: image}
       - {label: "Comentário sobre o vídeo", name: "body", widget: "markdown"}
       - {label: "Categorias", name: "tags", widget: "list"}
 
