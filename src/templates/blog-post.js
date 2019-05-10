@@ -10,6 +10,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   ytkey,
+  featuredimage,
   tags,
   title,
   helmet,
@@ -26,6 +27,7 @@ export const BlogPostTemplate = ({
               {title}
             </h1>
             <p><img src={`https://img.youtube.com/vi/${ytkey}/maxresdefault.jpg`} alt="Youtube thumbnail"/></p>
+            <p><img src={`url(${featuredimage})`} alt="Thumbnail"/></p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -47,10 +49,11 @@ export const BlogPostTemplate = ({
 }
 
 BlogPostTemplate.propTypes = {
+  title: PropTypes.string,
+  ytkey: PropTypes.string,
+  featuredimage: PropTypes.string,
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  ytkey: PropTypes.string,
-  title: PropTypes.string,
   helmet: PropTypes.object,
 }
 
@@ -63,6 +66,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         ytkey={post.frontmatter.ytkey}
+        featuredimage={post.frontmatter.featuredimage}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
