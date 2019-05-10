@@ -1,8 +1,11 @@
 ---
 templateKey: index-page
 title: Constelação Familiar Sistêmica
-subtitle: Espaço LuzJo
 image: /img/espaco.jpg
+heading: Constelação Familiar Sistêmica
+subheading: Espaço LuzJo
+description: >-
+  Aqui você vai encontrar indicações para seus estudos de constelação familiar
+  sistêmica.
 ---
-Aqui você vai encontrar indicações para seus estudos de constelação familiar sistêmica.
 
