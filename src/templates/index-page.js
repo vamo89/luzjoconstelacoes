@@ -70,7 +70,11 @@ export const IndexPageTemplate = ({
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="columns">
-                  <div className="column is-12">
+                  <div className="column is-12"
+                    style={{
+                      backgroundColor: 'rgba(0, 50, 200, 0.1)',
+                      borderRadius: '10px'
+                    }}>
                     <PageContent className="content" content={content} />
                   </div>
                 </div>
