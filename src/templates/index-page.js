@@ -4,21 +4,23 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
+import Content, { HTMLContent } from '../components/Content'
 
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
-  subheading,
-  description,
-}) => (
+  subtitle,
+  contentComponent,
+  content,
+}) => {
+  const PageContent = contentComponent || Content
+
+  return (
   <div>
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${image})`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
       }}
@@ -57,7 +59,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {subheading}
+          {subtitle}
         </h3>
       </div>
     </div>
@@ -69,10 +71,7 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
+                    <PageContent className="content" content={content} />
                   </div>
                 </div>
                 <div className="column is-12">
@@ -93,27 +92,27 @@ export const IndexPageTemplate = ({
       </div>
     </section>
   </div>
-)
+)}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  description: PropTypes.string,
+  subtitle: PropTypes.string,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { markdownRemark: page } = data
 
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        description={frontmatter.description}
+        image={page.image}
+        title={page.title}
+        subtitle={page.subtitle}
+        contentComponent={HTMLContent}
+        content={page.html}
       />
     </Layout>
   )
@@ -132,8 +131,10 @@ export default IndexPage
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
+        subtitle
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -141,9 +142,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
-        description
       }
     }
   }

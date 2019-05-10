@@ -7,12 +7,12 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
 
   if (data) {
     return (
-    <AboutPageTemplate
-      title={data.title}
-      content={widgetFor('body')}
-      image={data.image}
-      imgdescription={data.imgdescription}
-    />
+      <AboutPageTemplate
+        title={data.title}
+        content={widgetFor('body')}
+        image={data.image}
+        imgdescription={data.imgdescription}
+      />
     )
   } else {
     return <div>Loading...</div>

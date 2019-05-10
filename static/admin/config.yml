@@ -29,10 +29,9 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Título da página", name: title, widget: string}
+          - {label: "Sub-título da página", name: subtitle, widget: string}
           - {label: "Imagem", name: image, widget: image}
-          - {label: "Título destaque", name: heading, widget: string}
-          - {label: "Sub-título destaque", name: subheading, widget: string}
-          - {label: "Descrição", name: description, widget: string}
+          - {label: "Corpo", name: body, widget: markdown}
       - file: "src/pages/about/index.md"
         label: "Espaço LuzJo"
         name: "about"
