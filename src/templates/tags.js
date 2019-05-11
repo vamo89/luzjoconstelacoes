@@ -26,7 +26,7 @@ class TagRoute extends React.Component {
                     <PreviewCompatibleImage imageInfo={{ image: post.frontmatter.featuredimage, alt: `Thumbnail for post ${post.frontmatter.title}` }} />
               }
             </div>
-            <p className="post-meta">
+            <p className="post-meta" style={{ width: '65%' }}>
               <Link
                 className="title has-text-primary is-size-4"
                 to={post.fields.slug}
