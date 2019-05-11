@@ -19,25 +19,27 @@ class BlogRoll extends React.Component {
                 borderRadius: 15,
               }}>
                 <div className="card-image" style={{ paddingTop: 15 }}>
-                  <figure className="image">
-                    {post.frontmatter.ytkey ? (
-                      <div className="featured-thumbnail">
-                        <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
-                      </div>
-                    ) : (
-                      post.frontmatter.featuredimage &&
+                  <Link to={post.fields.slug}>
+                    <figure className="image">
+                      {post.frontmatter.ytkey ? (
                         <div className="featured-thumbnail">
-                          <PreviewCompatibleImage
-                            imageInfo={{
-                              image: post.frontmatter.featuredimage,
-                              alt: `featured image thumbnail for post ${
-                                post.title
-                              }`,
-                            }}
-                          />
+                          <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
                         </div>
-                    )}
-                  </figure>
+                      ) : (
+                        post.frontmatter.featuredimage &&
+                          <div className="featured-thumbnail">
+                            <PreviewCompatibleImage
+                              imageInfo={{
+                                image: post.frontmatter.featuredimage,
+                                alt: `featured image thumbnail for post ${
+                                  post.title
+                                }`,
+                              }}
+                            />
+                          </div>
+                      )}
+                    </figure>
+                  </Link>
                 </div>
                 <div className="card-content">
                   <div className="media">
@@ -50,16 +52,17 @@ class BlogRoll extends React.Component {
                     </div>
                   </div>
                   <div className="content">
-                    {post.excerpt}
+                    <time style={{ fontSize: 14, color: '#555' }}>{post.frontmatter.date}</time>
                     <br />
-                    <time>{post.frontmatter.date}</time>
+                    {post.excerpt}
                     <br />
                     <Link className="button is-info"
                       style={{
                         backgroundColor: '#209cee',
                         borderColor: 'transparent',
                         color: '#fff',
-                        transform: 'translate(50%)',
+                        left: '50%',
+                        transform: 'translate(-50%, 10px)',
                       }}
                       to={post.fields.slug}>
                       Continue lendo →
