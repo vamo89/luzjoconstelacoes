@@ -3,7 +3,6 @@ templateKey: blog-post
 title: Sims 4
 date: 2017-01-04T15:04:10.000Z
 ytkey: SQPGolKYca0
-featuredimage: ''
 tags:
   - amigos
   - youtube

@@ -56,7 +56,7 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   title: PropTypes.string,
   ytkey: PropTypes.string,
-  featuredimage: PropTypes.any,
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   helmet: PropTypes.object,

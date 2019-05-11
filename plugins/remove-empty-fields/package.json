@@ -1,0 +1,7 @@
+{
+  "name": "remove-empty-fields",
+  "description": "A plugin to remove empty fields from markdown.",
+  "main": "index.js",
+  "version": "0.0.0-development",
+  "license": "MIT"
+}

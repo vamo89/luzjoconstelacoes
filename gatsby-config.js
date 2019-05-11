@@ -68,6 +68,17 @@ module.exports = {
       },
     },
     {
+      resolve: 'remove-empty-fields',
+      options: {
+        fieldsToRemove: [
+          'image',
+          'bgImage',
+          'featuredimage',
+          'ytkey',
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
