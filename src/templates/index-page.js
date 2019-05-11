@@ -75,7 +75,7 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
+                  <h3 className="has-text-weight-semibold is-size-2" style={{ color: 'rgb(36, 18, 64)' }}>
                     Últimas indicações
                   </h3>
                   <BlogRoll />
