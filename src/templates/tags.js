@@ -30,6 +30,7 @@ class TagRoute extends React.Component {
               <Link
                 className="title has-text-primary is-size-4"
                 to={post.fields.slug}
+                style={{ color: 'rgb(36, 18, 64)' }}
               >
                 {post.frontmatter.title}
               </Link>
@@ -52,10 +53,10 @@ class TagRoute extends React.Component {
                 className="column is-10 is-offset-1"
                 style={{ marginBottom: '6rem' }}
               >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
+                <h3 className="title is-size-4 is-bold-light" style={{ color: 'rgb(36, 18, 64)' }}>{tagHeader}</h3>
                 <ul className="taglist">{postLinks}</ul>
                 <p>
-                  <Link to="/tags/">Veja todas as categorias</Link>
+                  <Link to="/tags/" style={{ color: 'rgb(36, 18, 64)' }}>Veja todas as categorias</Link>
                 </p>
               </div>
             </div>
