@@ -21,12 +21,13 @@ const TagsPage = ({
             className="column is-10 is-offset-1"
             style={{ marginBottom: '6rem' }}
           >
-            <h1 className="title is-size-2 is-bold-light">Categorias</h1>
-            <p>Clique em uma categoria para ver todas as indicações com este tema</p>
+            <h1 className="title is-size-2 is-bold-light" style={{ color: 'rgb(36, 18, 64)' }}>Categorias</h1>
+            <p style={{ color: 'rgb(36, 18, 64)' }}>Clique em uma categoria para ver todas as indicações com este tema</p>
             <ul className="taglist tags">
               {group.map(tag => (
                 <li key={tag.fieldValue}>
-                  <Link className="tag is-link is-size-5" to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  <Link className="tag is-link is-size-5" to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                    style={{ backgroundColor: 'rgb(36, 18, 64)' }}>
                     {tag.fieldValue} ({tag.totalCount})
                   </Link>
                 </li>
