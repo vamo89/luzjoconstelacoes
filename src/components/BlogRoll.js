@@ -58,7 +58,7 @@ class BlogRoll extends React.Component {
                     <br />
                     <Link className="button is-info"
                       style={{
-                        backgroundColor: '#209cee',
+                        backgroundColor: 'rgb(36, 18, 64)',
                         borderColor: 'transparent',
                         color: '#fff',
                         left: '50%',
