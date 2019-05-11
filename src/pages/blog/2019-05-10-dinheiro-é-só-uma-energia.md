@@ -7,4 +7,4 @@ tags:
   - dinheiro
   - youtube
 ---
-Vídeo bom sobre dinheiro
+Vídeo bom sobre dinheiro! Atualizado!
