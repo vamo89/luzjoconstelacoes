@@ -1,9 +1,15 @@
+@import "~bulma/sass/utilities/initial-variables"
+
 .img-text-duo
     display: flex
     align-items: center
     background-color: rgba(0, 50, 200, 0.1)
     border-radius: 10px
     padding: 10px
+    flex-direction: column
+
+    @media screen and (min-width: $tablet)
+        flex-direction: row
 
     div
         padding-right: 15px
