@@ -18,7 +18,7 @@ class BlogRoll extends React.Component {
                 backgroundColor: 'rgba(0,50,200,0.1)',
                 borderRadius: 15,
               }}>
-                <div className="card-image">
+                <div className="card-image" style={{ paddingTop: 15 }}>
                   <figure className="image">
                     {post.frontmatter.ytkey ? (
                       <div className="featured-thumbnail">
