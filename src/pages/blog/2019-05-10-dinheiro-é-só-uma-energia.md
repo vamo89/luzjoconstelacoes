@@ -7,4 +7,8 @@ tags:
   - dinheiro
   - youtube
 ---
-Vídeo bom sobre dinheiro! Atualizado!
+## [Link para o vídeo](https://www.youtube.com/watch?v=Nawrg_PY0D8)
+
+
+
+Dinheiro é uma Energia. Ele Só Permanece Conosco Quando Eu Mudo Meu Jeito de Olhar Para Minha Mãe.
