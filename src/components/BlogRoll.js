@@ -15,7 +15,7 @@ class BlogRoll extends React.Component {
             <div className="is-parent column is-6" key={post.id}>
               <div className="card"
               style={{
-                backgroundColor: 'rgba(0,50,200,0.1)',
+                backgroundColor: 'rgba(108, 55, 191, 0.2)', //$site-primary-lighter-color
                 borderRadius: 15,
               }}>
                 <div className="card-image" style={{ paddingTop: 15 }}>
