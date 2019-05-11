@@ -23,7 +23,7 @@ class BlogRoll extends React.Component {
                     <figure className="image">
                       {post.frontmatter.ytkey ? (
                         <div className="featured-thumbnail">
-                          <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt="Youtube thumbnail" />
+                          <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/maxresdefault.jpg`} alt="Youtube thumbnail" />
                         </div>
                       ) : (
                         post.frontmatter.featuredimage &&
@@ -107,7 +107,7 @@ export default () => (
                 ytkey
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 512, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
