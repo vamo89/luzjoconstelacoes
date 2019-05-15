@@ -29,7 +29,7 @@ export const BlogPostTemplate = ({
             </h1>
             <p>
               {ytkey ?
-                <img style="width:100%" src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
+                <img style={{ width: '100%' }} src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
                 : featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />
               }
             </p>
