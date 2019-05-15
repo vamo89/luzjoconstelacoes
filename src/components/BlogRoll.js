@@ -23,7 +23,7 @@ class BlogRoll extends React.Component {
                     <figure className="image">
                       {post.frontmatter.ytkey ? (
                         <div className="featured-thumbnail">
-                          <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/maxresdefault.jpg`} alt="Youtube thumbnail" />
+                          <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/hqdefault.jpg`} alt="Youtube thumbnail" />
                         </div>
                       ) : (
                         post.frontmatter.featuredimage &&
