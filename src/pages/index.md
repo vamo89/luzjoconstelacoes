@@ -6,7 +6,9 @@ image: /img/espaco.jpg
 ---
 Neste site você vai encontrar indicações da Consteladora Familiar Rita Ventura para seus estudos de constelação familiar sistêmica. Os conteúdos não são produzidos por nós. Esta é uma curadoria, que indica os melhores conteúdos para os diversos temas.
 
-📆 
+📆 Avisaremos aqui quando a próxima constelação em grupo for marcada.
+
+Se você deseja receber a informação no seu WhatsApp, nos deixe uma mensagem na aba contato ou nos mande uma mensagem pelo celular:
 
 ☎️ **Contato: (31) 98814-4331**
 
