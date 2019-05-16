@@ -6,7 +6,7 @@ image: /img/espaco.jpg
 ---
 Neste site você vai encontrar indicações da Consteladora Familiar Rita Ventura para seus estudos de constelação familiar sistêmica. Os conteúdos não são produzidos por nós. Esta é uma curadoria, que indica os melhores conteúdos para os diversos temas.
 
-📆 A nossa próxima constelação em grupo será no dia 15/05/2019 (quarta-feira), às 19 horas , no Espaço LuzJo. Entre em contato para participar ou constelar!
+📆 
 
 ☎️ **Contato: (31) 98814-4331**
 
