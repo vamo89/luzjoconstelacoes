@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Aceitar a mãe é aceitar a vida! | Marina Rabelo
-date: 2016-12-17T15:04:10.000Z
+date: 2019-05-10T14:05:00.000Z
 ytkey: A8WY_JMn96c
 tags:
   - mãe
