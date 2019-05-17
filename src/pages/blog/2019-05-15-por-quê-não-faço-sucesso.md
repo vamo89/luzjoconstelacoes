@@ -6,6 +6,4 @@ ytkey: SzPXdjvxAR8
 tags:
   - Familia
 ---
-## [Link para o vídeo](https://www.youtube.com/watch?v=SzPXdjvxAR8)
-
 Como o amor cego pode nos emaranhar. E é tão inconsciente. Este vídeo ajuda a entender como prosperar sem culpa.

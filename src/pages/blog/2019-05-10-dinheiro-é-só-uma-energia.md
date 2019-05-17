@@ -8,10 +8,6 @@ tags:
   - youtube
   - mãe
 ---
-## [Link para o vídeo](https://www.youtube.com/watch?v=Nawrg_PY0D8)
-
-
-
 Dinheiro é uma Energia. Ele só permanece conosco quando eu mudo meu jeito de olhar para minha mãe.
 
 Consteladora Elza Carvalho

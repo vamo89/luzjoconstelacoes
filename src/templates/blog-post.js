@@ -33,6 +33,9 @@ export const BlogPostTemplate = ({
                 : featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />
               }
             </p>
+            { ytkey &&
+              <h2><a href={`https://www.youtube.com/watch?v=${ytkey}`}>Link para o vídeo</a></h2>
+            }
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>

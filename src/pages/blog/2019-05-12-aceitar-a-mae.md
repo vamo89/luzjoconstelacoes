@@ -9,6 +9,4 @@ tags:
   - família
   - youtube
 ---
-## [Link para o vídeo](https://www.youtube.com/watch?v=A8WY_JMn96c)
-
 "Um constelador deve de ter claro que: A felicidade se logra quando primeiro se vai até a mãe." (Bert Hellinger)
