@@ -4,7 +4,7 @@ title: Espaço LuzJo
 image: /img/profile.jpg
 imgdescription: >-
   Esta é a consteladora familiar Rita Ventura, que cuida do espaço com todo
-  amor. Formada pelo Tuco.
+  amor. Formada pelo Tuco Gabriel.
 ---
  ___
 
