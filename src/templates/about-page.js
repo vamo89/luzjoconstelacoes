@@ -21,7 +21,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, img
               </h2>
               <div className="img-text-duo">
                 <div>
-                  <PreviewCompatibleImage imageInfo={{ image, alt: `Thumbnail for post ${title}` }} />
+                  <PreviewCompatibleImage imageInfo={{ image, alt: 'Foto de perfil da Rita Ventura' }} />
                 </div>
                 {imgdescription}
               </div>
