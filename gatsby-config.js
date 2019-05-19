@@ -5,7 +5,6 @@ module.exports = {
     title: 'LuzJo Constelação Familiar Sistêmica',
     description:
       'Este site contém informações sobre constelação familiar sistêmica. Espaço LuzJo. Itabira/MG.',
-    'google-site-verification': 'tixqdiMVOuNRXtz08pI5A4ArFkpPfUvnvRjkQxUEtos',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
