@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Profundamento lindo e verdadeiro!
+title: Profundamente lindo e verdadeiro!
 date: 2019-05-20T14:59:16.803Z
 tags:
   - Família
