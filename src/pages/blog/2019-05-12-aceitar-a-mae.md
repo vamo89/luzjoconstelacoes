@@ -7,6 +7,5 @@ tags:
   - Mãe
   - Pais
   - Família
-  - Youtube
 ---
 "Um constelador deve de ter claro que: A felicidade se logra quando primeiro se vai até a mãe." (Bert Hellinger)
