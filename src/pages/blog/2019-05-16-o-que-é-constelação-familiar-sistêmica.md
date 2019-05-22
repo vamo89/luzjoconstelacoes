@@ -4,7 +4,7 @@ title: O que é Constelação Familiar Sistêmica
 date: 2019-05-16T14:36:20.484Z
 featuredimage: /img/58374376_2312424369083412_3700486729233334272_n.jpg
 tags:
-  - Constelação Familiar
+  - O que é Constelação?
 ---
 Todos nós possuímos uma família, e em nossa família de origem, tivemos um pai e uma mãe que nos concedeu o direito a vida…que hoje nos deu a oportunidade de estar aqui, nesta caminhada gratificante entre ensinar e aprender….estamos interligados a níveis morfogenéticos e quânticos com toda a nossa ancestralidade...esta ligação energética está a nível consciente e inconsciente,e muitas vezes honrando-nos  em todas as circunstâncias,sejam elas positivas ou negativas...honramos  em doenças, crenças e comportamentos repetitivos...não pensamos na questão, até identificarmos situações que nos levaram a um emaranhado de problemas e ocorrências sem explicações, que lutamos em evitar,mas este acordo muitas vezes está a nível bem mais profundo, quase imperceptível ao consciente identificar…
 

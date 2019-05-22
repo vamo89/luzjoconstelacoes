@@ -5,9 +5,9 @@ date: 2019-05-12T13:05:00.000Z
 ytkey: ''
 featuredimage: /img/coco-the-movie.jpeg
 tags:
-  - família
-  - avós
-  - filme
+  - Família
+  - Avós
+  - Filme
 ---
 O novo filme da Disney/Pixar “Viva — a vida é uma festa” traz a história de Miguel, um garoto mexicano apaixonado por música, numa família que não permite nenhuma menção a ela. O tataravó de Miguel, um músico, abandonou a família pelo sonho de ter a carreira músical. Este fato transforma a música no tabú da família.
 
