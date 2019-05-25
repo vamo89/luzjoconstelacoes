@@ -1,0 +1,21 @@
+@import "~bulma/sass/utilities/initial-variables"
+@import colors
+
+.footer .content
+    img
+        width: 14em
+        height: 10em
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(50deg) brightness(105%) contrast(101%)
+
+    .menu-list
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin: 0
+            
+        @media screen and (max-width: $tablet)
+            align-items: center
+
+footer.footer
+    padding: 3rem 0rem
+    background-color: transparent

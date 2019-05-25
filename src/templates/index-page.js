@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import Content, { HTMLContent } from '../components/Content'
 
+import './index.sass'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -25,36 +27,11 @@ export const IndexPageTemplate = ({
         backgroundAttachment: `fixed`,
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            backgroundColor: '#241240', //$site-primary-darker-color
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
+      <div className="title-container">
+        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen" >
           {title}
         </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            backgroundColor: '#241240', //$site-primary-darker-color
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
+        <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen" >
           {subtitle}
         </h3>
       </div>
@@ -66,20 +43,16 @@ export const IndexPageTemplate = ({
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="columns">
-                  <div className="column is-12"
-                    style={{
-                      backgroundColor: 'rgba(108, 55, 191, 0.2)', //$site-primary-lighter-color
-                      borderRadius: '10px'
-                    }}>
+                  <div className="column is-12 main-content">
                     <PageContent className="content" content={content} />
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2" style={{ color: 'rgb(36, 18, 64)' }}>
+                  <h3 className="has-text-weight-semibold is-size-2 has-text-primary">
                     Últimas indicações
                   </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
+                  <BlogRoll/>
+                  <div className="column is-12 has-text-centered ">
                     <Link className="btn" to="/blog">
                       Veja mais
                     </Link>

@@ -1,15 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables"
-
-// Config vars
-$site-primary-color: #6C37BF
-$site-primary-lighter-color: rgba(108, 55, 191, 0.2)
-$site-primary-darker-color: #241240
-$site-secondary-lighter-color: white
-
-$primary: $site-primary-color
-$primary-invert: $site-secondary-lighter-color
-$body-color: #333
-$black: $site-primary-darker-color
+@import colors
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -62,9 +52,9 @@ $black: $site-primary-darker-color
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
-    color: rgb(36, 18, 64)
+    color: $site-primary-darker-color
     text-align: center
-    box-shadow: inset 0 0 0 2px rgb(36, 18, 64)
+    box-shadow: inset 0 0 0 2px $site-primary-darker-color
 
 .margin-top-0
   margin-top: 0 !important
@@ -78,9 +68,6 @@ $black: $site-primary-darker-color
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -121,7 +108,6 @@ $menu-label-color: $white-ter
   margin: 0 1.5em 0 0
 
 @import "~bulma"
-
 
 // responsiveness
 +tablet-only

@@ -2,6 +2,8 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
+import './contact.sass'
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -41,7 +43,7 @@ export default class Index extends React.Component {
             <div className="content">
               <h1>Contato</h1>
               <p>Entre em contato conosco para:
-                <ul style={{marginTop: '0.3em', lineHeight: 1.4}}>
+                <ul>
                   <li>Pedir indicação sobre algum tema.</li>
                   <li>Marcação de constelação familiar sistêmica individual presencial ou por skype.</li>
                   <li>Mais informações sobre constelação familiar.</li>
@@ -59,7 +61,7 @@ export default class Index extends React.Component {
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
                   <label>
-                    Don’t fill this out:{' '}
+                    Don’t fill this out:
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
@@ -108,9 +110,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" style={{ backgroundColor: 'rgb(36, 18, 64)' }} type="submit">
-                    Enviar
-                  </button>
+                  <button className="button is-link" type="submit">Enviar</button>
                 </div>
               </form>
             </div>

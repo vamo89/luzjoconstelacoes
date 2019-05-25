@@ -3,12 +3,14 @@ import { Link } from 'gatsby'
 
 import logo from '../img/logo.svg'
 
+import './footer.sass'
+
 const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
         <div className="content level">
-          <section className="level-item has-text-centered menu">
+          <section className="level-item menu">
             <ul className="menu-list">
               {[
                 {to: '/', name:'Home'},
@@ -35,16 +37,7 @@ const Footer = class extends React.Component {
             </ul>
           </section>
           <div className="level level-item ">
-            <img
-              src={logo}
-              alt="LuzJo"
-              className="level-item has-text-centered"
-              style={{
-                width: '14em',
-                height: '10em',
-                filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(50deg) brightness(105%) contrast(101%)',
-              }}
-            />
+            <img src={logo} alt="LuzJo" className="level-item has-text-centered"/>
           </div>
         </div>
       </footer>

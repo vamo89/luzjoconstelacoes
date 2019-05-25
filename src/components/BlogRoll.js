@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
+import './BlogRoll.sass'
+
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -13,12 +15,8 @@ class BlogRoll extends React.Component {
         {posts ?
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
-              <div className="card"
-              style={{
-                backgroundColor: 'rgba(108, 55, 191, 0.2)', //$site-primary-lighter-color
-                borderRadius: 15,
-              }}>
-                <div className="card-image" style={{ paddingTop: 15 }}>
+              <div className="card">
+                <div className="card-image">
                   <Link to={post.fields.slug}>
                     <figure className="image">
                       {post.frontmatter.ytkey ? (
@@ -52,21 +50,11 @@ class BlogRoll extends React.Component {
                     </div>
                   </div>
                   <div className="content">
-                    <time style={{ fontSize: 14, color: '#555' }}>{post.frontmatter.date}</time>
+                    <time>{post.frontmatter.date}</time>
                     <br />
                     {post.excerpt}
                     <br />
-                    <Link className="button is-info"
-                      style={{
-                        backgroundColor: 'rgb(36, 18, 64)',
-                        borderColor: 'transparent',
-                        color: '#fff',
-                        left: '50%',
-                        transform: 'translate(-50%, 10px)',
-                      }}
-                      to={post.fields.slug}>
-                      Continue lendo →
-                    </Link>
+                    <Link className="button is-info" to={post.fields.slug}>Continue lendo →</Link>
                   </div>
                 </div>
               </div>

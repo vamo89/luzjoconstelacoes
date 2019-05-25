@@ -7,6 +7,8 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+import './blog-post.sass'
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -19,7 +21,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="blog-post section">
       {helmet || ''}
       <div className="container content">
         <div className="columns">
@@ -29,7 +31,7 @@ export const BlogPostTemplate = ({
             </h1>
             <p>
               {ytkey ?
-                <img style={{ width: '100%' }} src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
+                <img className="youtube-title-image" src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
                 : featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />
               }
             </p>
@@ -38,12 +40,12 @@ export const BlogPostTemplate = ({
             }
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div className="tags-container">
                 <h4>Categorias</h4>
                 <ul className="taglist">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
-                      <Link className="tag is-link is-size-7" to={`/tags/${kebabCase(tag)}/`} style={{ backgroundColor: 'rgb(36, 18, 64)' }}>{tag}</Link>
+                      <Link className="tag is-link is-size-7" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
                   ))}
                 </ul>

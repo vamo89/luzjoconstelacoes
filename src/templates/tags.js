@@ -4,6 +4,8 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+import './tags.sass'
+
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -13,25 +15,22 @@ class TagRoute extends React.Component {
     const suffix = totalCount === 1 ? '' : 's';
     const tagHeader = `${totalCount} post${suffix} categorizado${suffix} como “${tag}”`
 
-    const postLinks = posts.map(({ node: post }) => (
+    const postLinks = posts.map(({ node: post }) => {
+      const hasImg = post.frontmatter.ytkey || post.frontmatter.featuredimage;
+      return (
       <div className="is-parent column is-6" key={post.id}>
-        <article
-          className={`blog-list-item tile is-child box notification`}
-        >
+        <article className={`blog-list-item tile is-child box notification`}>
           <header>
-            <div className="featured-thumbnail">
-              {post.frontmatter.ytkey ?
-                <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt={`Youtube thumbnail for post ${post.frontmatter.title}`}/>
-                : post.frontmatter.featuredimage &&
-                    <PreviewCompatibleImage imageInfo={{ image: post.frontmatter.featuredimage, alt: `Thumbnail for post ${post.frontmatter.title}` }} />
-              }
-            </div>
-            <p className="post-meta" style={{ width: '65%' }}>
-              <Link
-                className="title has-text-primary is-size-4"
-                to={post.fields.slug}
-                style={{ color: 'rgb(36, 18, 64)' }}
-              >
+            {hasImg && 
+              <div className="featured-thumbnail">
+                {post.frontmatter.ytkey ?
+                  <img src={`https://img.youtube.com/vi/${post.frontmatter.ytkey}/mqdefault.jpg`} alt={`Youtube thumbnail for post ${post.frontmatter.title}`}/>
+                  : <PreviewCompatibleImage imageInfo={{ image: post.frontmatter.featuredimage, alt: `Thumbnail for post ${post.frontmatter.title}` }} />
+                }
+              </div>
+            }
+            <p className={`post-meta ${hasImg ? 'has-img' : ''}`}>
+              <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
                 {post.frontmatter.title}
               </Link>
             </p>
@@ -41,7 +40,7 @@ class TagRoute extends React.Component {
           </Link>
         </article>
       </div>
-    ));
+    )});
 
     return (
       <Layout>
@@ -49,14 +48,11 @@ class TagRoute extends React.Component {
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
             <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="title is-size-4 is-bold-light" style={{ color: 'rgb(36, 18, 64)' }}>{tagHeader}</h3>
+              <div className="column is-10 is-offset-1 tag-column">
+                <h3 className="title is-size-4 is-bold-light has-text-primary">{tagHeader}</h3>
                 <ul className="taglist">{postLinks}</ul>
                 <p>
-                  <Link to="/tags/" style={{ color: 'rgb(36, 18, 64)' }}>Veja todas as categorias</Link>
+                  <Link to="/tags/" className="has-text-primary">Veja todas as categorias</Link>
                 </p>
               </div>
             </div>
