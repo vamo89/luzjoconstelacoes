@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
             <p>
               {ytkey ?
                 <img className="youtube-title-image" src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
-                : featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />
+                : featuredimage && featuredimage.childImageSharp && featuredimage.childImageSharp.fluid && featuredimage.childImageSharp.fluid.src && <img src={featuredimage.childImageSharp.fluid.src} alt={`Thumbnail for post ${title}`} style={{ borderRadius: '5px', width: '100%' }} /> /* && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />*/
               }
             </p>
             { ytkey &&
@@ -114,7 +114,7 @@ export const pageQuery = graphql`
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+              src
             }
           }
         }
