@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
             <p>
               {ytkey ?
                 <img className="youtube-title-image" src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
-                : featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />
+                : <Img style={{ borderRadius: '5px' }} fluid={image.childImageSharp.fluid} alt={`Thumbnail for post ${title}`} /> /* featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} /> */
               }
             </p>
             { ytkey &&
