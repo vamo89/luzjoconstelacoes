@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Img from 'gatsby-image'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 import './blog-post.sass'
 
@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
             <p>
               {ytkey ?
                 <img className="youtube-title-image" src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
-                : featuredimage && featuredimage.childImageSharp && featuredimage.childImageSharp.fluid && <Img style={{ borderRadius: '5px' }} fluid={featuredimage.childImageSharp.fluid} alt={`Thumbnail for post ${title}`} /> /* featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} /> */
+                : featuredimage && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />
               }
             </p>
             { ytkey &&
