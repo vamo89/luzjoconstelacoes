@@ -28,13 +28,13 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>
-              {ytkey ?
-                <div className="video-container"><iframe className="video" title="Youtube Video" src={`https://www.youtube.com/embed/${ytkey}`} frameBorder="0" allowfullscreen></iframe></div>
-                : featuredimage && featuredimage.childImageSharp && featuredimage.childImageSharp.fluid && featuredimage.childImageSharp.fluid.src && <img src={featuredimage.childImageSharp.fluid.src} alt={`Thumbnail for post ${title}`} style={{ borderRadius: '5px', width: '100%' }} />
-              }
-            </p>
-            <PostContent content={content} />
+            {ytkey ?
+              <div className="video-container"><iframe className="video" title="Youtube Video" src={`https://www.youtube.com/embed/${ytkey}`} frameBorder="0" allowfullscreen></iframe></div>
+              : featuredimage && featuredimage.childImageSharp && featuredimage.childImageSharp.fluid && featuredimage.childImageSharp.fluid.src && <img src={featuredimage.childImageSharp.fluid.src} alt={`Thumbnail for post ${title}`} style={{ borderRadius: '5px', width: '100%' }} />
+            }
+            <section>
+              <PostContent content={content} />
+            </section>
             {tags && tags.length ? (
               <div className="tags-container">
                 <h4>Categorias</h4>
