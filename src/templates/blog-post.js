@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 import './blog-post.sass'
 
@@ -31,13 +30,10 @@ export const BlogPostTemplate = ({
             </h1>
             <p>
               {ytkey ?
-                <img className="youtube-title-image" src={`https://img.youtube.com/vi/${ytkey}/hqdefault.jpg`} alt={`Youtube thumbnail for post ${title}`}/>
-                : featuredimage && featuredimage.childImageSharp && featuredimage.childImageSharp.fluid && featuredimage.childImageSharp.fluid.src && <img src={featuredimage.childImageSharp.fluid.src} alt={`Thumbnail for post ${title}`} style={{ borderRadius: '5px', width: '100%' }} /> /* && <PreviewCompatibleImage imageInfo={{ image: featuredimage, alt: `Thumbnail for post ${title}` }} />*/
+                <div className="video-container"><iframe className="video" title="Youtube Video" src={`https://www.youtube.com/embed/${ytkey}`} frameBorder="0" allowfullscreen></iframe></div>
+                : featuredimage && featuredimage.childImageSharp && featuredimage.childImageSharp.fluid && featuredimage.childImageSharp.fluid.src && <img src={featuredimage.childImageSharp.fluid.src} alt={`Thumbnail for post ${title}`} style={{ borderRadius: '5px', width: '100%' }} />
               }
             </p>
-            { ytkey &&
-              <h2><a href={`https://www.youtube.com/watch?v=${ytkey}`}>Link para o vídeo</a></h2>
-            }
             <PostContent content={content} />
             {tags && tags.length ? (
               <div className="tags-container">
