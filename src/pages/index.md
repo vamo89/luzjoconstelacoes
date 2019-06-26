@@ -8,6 +8,10 @@ Neste site você vai encontrar indicações da Consteladora Familiar Rita Ventur
 
 📆 Avisaremos aqui quando a próxima constelação em grupo for marcada.
 
+Promoção de Férias!
+
+Atendendo à preferência da maioria, faremos atendimentos individuais, em que o constelado aprende como funciona a constelação familiar e recebe um diagnóstico que revela por onde começar sua terapia. Não perca tempo, faça seu agendamento! Preço promocional, por tempo limitado!
+
 Se você deseja receber a informação no seu WhatsApp, nos deixe uma mensagem na aba contato ou nos mande uma mensagem pelo celular:
 
 ☎️ **Contato: (31) 98814-4331**
